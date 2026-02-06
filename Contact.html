@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Certified financial advisors offering investment planning, wealth management, retirement planning, and financial guidance.">
+    <meta name="keywords" content="financial advisor, investment, wealth management, financial planning">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/middle_sections.css">
+    <link rel="stylesheet" href="assets/css/anim-effects.css">
+    <link rel="stylesheet" href="assets/css/components/header-40.css">
+    <link rel="stylesheet" href="assets/css/components/footer-9.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/custom-Imports.css">
+    <link rel="stylesheet" href="assets/css/resonsive.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        :root {
+            --site-font: Quicksand;
+        }
+
+        body,
+        #wrapper,
+        #wrapper * {
+            font-family: var(--site-font) !important;
+        }
+    </style>
+</head>
+
+<body class="theme-1">
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="mainPageContent">
+
+            <section class="section-wrapper contact-18">
+                <div class="container-fluid contact-18-wrapper">
+                    <div class="row contact-18-row"> <!-- Left Side - Form -->
+                        <div class="col-md-6 col-sm-12 contact-18-form-side">
+                            <div class="contact-18-form-box"> <button class="contact-18-top-btn">SCHEDULE
+                                    CONSULTATION</button>
+                                <h2 class="contact-18-title">Financial Advisor</h2>
+                                <p class="contact-18-desc">Connect with our experts for a free consultation and tailored
+                                    financial
+                                    solutions.</p>
+                                <form method="POST" id="contact-form">
+                                    <div class="row">
+                                        <div class="col-sm-6"> <input type="text" class="form-control contact-18-input"
+                                                placeholder="Name" name="name" required> </div>
+                                        <div class="col-sm-6"> <input type="email" class="form-control contact-18-input"
+                                                placeholder="Email" name="email" required> </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12"><textarea class="form-control contact-18-textarea"
+                                                name="message" rows="5" required></textarea> </div>
+                                    </div> <button type="submit" class="btn contact-18-btn"
+                                        onclick="sendEmailDataToGitHub()">Schedule a Free Consultation</button>
+                                    <!-- Form Message -->
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <p class="form-message"></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> <!-- Right Side - Image -->
+                        <div class="col-md-6 col-sm-12 contact-18-image-side"
+                            style="background: url('assets/images/contact-18.JPG') center center/cover no-repeat;">
+                            <div class="contact-18-call-box"> <i class="ri-phone-fill contact-18-icon"></i>
+                                <p>Call us at <a href="#">(101) 500 0200</a> or fill out our form, and we'll contact you
+                                    within one
+                                    business day.</p>
+                            </div>
+                        </div>
+                    </div> <!-- Bottom Subscribe Bar -->
+                    <div class="contact-18-subscribe">
+                        <div class="container text-center">
+                            <p class="contact-18-subtext">Subscribe to Finexor Insights, our monthly look at the
+                                critical issues
+                                facing global businesses.</p>
+                            <div class="contact-18-subform"> <input type="email" class="contact-18-email"
+                                    placeholder="Your email address"> <button class="contact-18-arrow"><i
+                                        class="ri-arrow-right-line"></i></button> </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="footer"></div>
+    </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/jquery.main.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/Observer.min.js"></script>
+    <script src="assets/js/gsap.effects.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/common_js/send_email.js"></script>
+    <script src="assets/js/common_js/html_image_editor.js"></script>
+    <script src="assets/js/common_js/windows_postmessage.js"></script>
+    <script>
+        var fileName = document.title || "index";
+
+        $(document).ready(function () {
+            loadHeaderFooter("header", "client-assets/nrfi53878/nrfi53878/header.html");
+            loadHeaderFooter("footer", "client-assets/nrfi53878/nrfi53878/footer.html");
+
+            loadHeaderFooter("header", "header.html");
+            loadHeaderFooter("footer", "footer.html");
+        });
+
+        function loadHeaderFooter(id, file) {
+            $("#" + id).load(file, function (response, status, xhr) {
+                if (status === "error") {
+                    console.error("Error loading " + file + ":", xhr.status, xhr.statusText);
+                    return;
+                }
+
+                $("#" + id).find("a").addClass("edit-site");
+
+                if (id === "header") {
+                    if (fileName.toLowerCase() === "index" || fileName.toLowerCase() === "home") {
+                        $("#" + id).find(".main-header-section").css("display", "inline-block");
+                    } else {
+                        $("#" + id).find(".main-header-section").css("display", "none");
+                        $("#" + id).find(".header-breadcrumb-section").css("display", "inline-block");
+                        $("#" + id).find(".header-breadcrumb-section .Page_name")
+                            .text(fileName.charAt(0).toUpperCase() + fileName.slice(1));
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="assets/js/middle-section.js"></script>
+
+</body>
+
+</html>
